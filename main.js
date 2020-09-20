@@ -33,7 +33,7 @@ async function getEmotes(check) {
   // get channel twitch ID
   let res = await fetch(proxyurl + "https://api.ivr.fi/twitch/resolve/" + channel, {
     method: "GET",
-    headers: { "User-Agent": "api.roaringiron.com/emoteoverlay" },
+    headers: { "User-Agent": "flashsky.github.io/emoteoverlay" },
   }).then(
     function (response) {
       return response.json();
@@ -207,7 +207,7 @@ function streakEvent() {
   if (currentStreak.streak >= minStreak && streakEnabled == 1) {
     $("#main").empty();
     $("#main").css("position", "absolute");
-    $("#main").css("top", "650");
+    $("#main").css("top", "775");
     $("#main").css("left", "40");
     var img = $("<img />", { src: currentStreak.emoteURL, style: "transform: scale(1.5, 1.5)" });
     img.appendTo("#main");
